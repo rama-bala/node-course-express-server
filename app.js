@@ -23,10 +23,10 @@ app.use((req,res,next) => {
 })
 
 
-app.use((req,res,next) => {
-     console.log("Server Maintainance Mode");
-     res.render('maintanance.hbs')
-});
+// app.use((req,res,next) => {
+//      console.log("Server Maintainance Mode");
+//      res.render('maintanance.hbs')
+// });
 
 app.get('/', (req,res) => {
     res.render('home.hbs', {
