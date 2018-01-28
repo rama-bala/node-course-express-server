@@ -43,6 +43,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req,res) => {
+        res.render('projects.hbs', {
+            pageTitle : "Projects Page",
+            project1: "https://github.com/ramabalajava/node-course-express-server"
+        });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'This is an ErrorPage'
