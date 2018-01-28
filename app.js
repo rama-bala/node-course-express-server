@@ -8,7 +8,6 @@ var app = express();
 
 hbs.registerPartials(__dirname+"/views/partials")
 app.set('view engine','hbs');
-app.use(express.static(__dirname+ '/public'));
 
 
 app.use((req,res,next) => {
@@ -22,6 +21,7 @@ app.use((req,res,next) => {
     next();//With Out next() web application will stuck on serving request.
 })
 
+app.use(express.static(__dirname+ '/public'));
 
 // app.use((req,res,next) => {
 //      console.log("Server Maintainance Mode");
